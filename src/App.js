@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Combiner from "./Combiner";
+
 
 function App() {
-  return (
+  const data = {
+    "svg": "<svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+    "image1" : "<circle cx=\"64\" cy=\"64\" r=\"64\" fill=\"#FFD528\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M35.0294 48.3253C34.5289 49.0717 33.3482 49.0196 33.1894 48.135C33.0652 47.4436 33.0003 46.7316 33 46.0044C32.9976 39.377 38.3682 34.0024 44.9956 34C51.623 33.9976 56.9976 39.3682 57 45.9956C57.0003 46.7227 56.9359 47.4348 56.8122 48.1263C56.654 49.011 55.4733 49.064 54.9723 48.318C52.8173 45.1094 49.1544 42.9985 44.9989 43C40.8434 43.0015 37.182 45.1151 35.0294 48.3253ZM74.0294 48.3253C73.5289 49.0717 72.3482 49.0196 72.1894 48.135C72.0652 47.4436 72.0003 46.7316 72 46.0044C71.9976 39.377 77.3682 34.0024 83.9956 34C90.623 33.9976 95.9976 39.3682 96 45.9956C96.0003 46.7227 95.9359 47.4348 95.8122 48.1263C95.654 49.011 94.4733 49.064 93.9723 48.318C91.8173 45.1094 88.1544 42.9985 83.9989 43C79.8434 43.0015 76.182 45.1151 74.0294 48.3253Z\" fill=\"#2C1600\" fill-opacity=\"0.8\"/>",
+    "image2" : "<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 64C19.2386 87.3188 39.6505 105 64.1922 105C88.7338 105 109.146 87.3188 113.384 64H15Z\" fill=\"#2C1600\" fill-opacity=\"0.7\"/>"
+  }
+
+   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Combiner data={data}/>
     </div>
   );
 }
